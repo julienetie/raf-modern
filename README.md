@@ -1,15 +1,22 @@
-# Optimal requestAnimationFrame & cancelAnimationFrame polyfill for modern development.
+# requestFrameModern
+
+## Optimal requestAnimationFrame & cancelAnimationFrame polyfill for modern development.
 
 ### A polyfill based on [request-frame](https://github.com/julienetie/request-frame)
 
-- Supports ES6 - AMD - CJS & IIFE 
+- Supports ES6, CJS & UMD
 - Provides a clean polyfill for requestAnimationFrame & cancelAnimationFrame.
 - Tested & working on: IE 9+, FF 25+, Opera 36+, Safari 6.1+, Chrome 30+, iOS 7+, Android 4.4+, Android Chrome 30+.  
 - Doesn't modify native functions unless specified.
 
+If you need to support legacy browsers see [requestFrame](https://github.com/julienetie/request-frame) for full support from IE5.5+.
+
+
 #### Install options
 
-`npm i request-frame-modern --save` **&nbsp;&nbsp;|&nbsp;&nbsp;** `bower i request-frame-modern` **&nbsp;&nbsp;|&nbsp;&nbsp;** [src](https://github.com/julienetie/request-frame-modern/tree/master/dist) **&nbsp;&nbsp;|&nbsp;&nbsp;** [release](https://github.com/julienetie/request-frame-modern/releases)
+`npm i request-frame-modern --save`
+
+`yarn add request-frame-modern`
 
 
 ```javascript
