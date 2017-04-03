@@ -1,43 +1,40 @@
-![img](http://i62.tinypic.com/2ui8xmp.jpg)
+# Optimal requestAnimationFrame & cancelAnimationFrame polyfill for modern development.
 
-### A comprehensive requestAnimationFrame & cancelAnimationFrame polyfill.
+### A polyfill based on [request-frame](https://github.com/julienetie/request-frame)
 
 - Supports ES6 - AMD - CJS & IIFE 
 - Provides a clean polyfill for requestAnimationFrame & cancelAnimationFrame.
-- Tested & working on: IE 5.5+, FF 3+, Opera 11.16+, Safari 4+, Chrome 14+, iOS 3+, Android 2.3+, Android Chrome 28+.  
-- **iOS 6 bug fix** without user-agent sniffing.
-- **Firefox 4 - 10 function mismatch normalization**.
+- Tested & working on: IE 9+, FF 25+, Opera 36+, Safari 6.1+, Chrome 30+, iOS 7+, Android 4.4+, Android Chrome 30+.  
 - Doesn't modify native functions unless specified.
-- AMD compliant.
 
 #### Install options
 
-`npm i request-frame --save` **&nbsp;&nbsp;|&nbsp;&nbsp;** `bower i request-frame` **&nbsp;&nbsp;|&nbsp;&nbsp;** [src](https://github.com/julienetie/request-frame/tree/master/dist) **&nbsp;&nbsp;|&nbsp;&nbsp;** [release](https://github.com/julienetie/request-frame/releases)
+`npm i request-frame-modern --save` **&nbsp;&nbsp;|&nbsp;&nbsp;** `bower i request-frame-modern` **&nbsp;&nbsp;|&nbsp;&nbsp;** [src](https://github.com/julienetie/request-frame-modern/tree/master/dist) **&nbsp;&nbsp;|&nbsp;&nbsp;** [release](https://github.com/julienetie/request-frame-modern/releases)
 
 
 ```javascript
-import requestFrame from 'request-frame';  // ES6
+import requestFrameModern from 'request-frame-modern';  // ES6
 ```
 
 ```javascript
-<script src="request-frame.js"></script> // AMD, IIFE
+<script src="request-frame-modern.js"></script> // AMD, IIFE
 ```
 
 ```javascript
-const requestFrame = require('request-frame');  // CJS
+const requestFrameModern = require('request-frame-modern');  // CJS
 ```
 
 
 ### The API:
 #### Assign the timing functions:
-*requestFrame( request | cancel | native )*  request is default. 
+*requestFrameModern( request | cancel | native )*  request is default. 
 ```javascript
-var request = requestFrame('request'); // window.requestAnimationFrame | setTimeout
-var cancel = requestFrame('cancel'); // window.cancelAnimationFrame | cancelTimeout
+var request = requestFrameModern('request'); // window.requestAnimationFrame | setTimeout
+var cancel = requestFrameModern('cancel'); // window.cancelAnimationFrame | cancelTimeout
 ```
 #### Or re/ assign native functions:
 ```javascript
-requestFrame('native'); // re/ declares requestAnimationFrame & cancelAnimationFrame
+requestFrameModern('native'); // re/ declares requestAnimationFrame & cancelAnimationFrame
 ```
 Below is just an example of the requestAnimationFrame API, see links: [MDN](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame), [MSDN](https://msdn.microsoft.com/en-us/library/windows/apps/hh453388.aspx) & [W3](http://www.w3.org/TR/2011/WD-html5-20110525/timers.html). 
 
@@ -49,10 +46,10 @@ function something( useTimeStamp ){
     
     // Do something here
     
-    requestId = request(something); 
+    requestId = requestFrameModern(something); 
 }
 
-requestId = request(something); // Assigns Id & calls "something"
+requestId = requestFrameModern(something); // Assigns Id & calls "something"
 ```
 
 #### Cancel something:
@@ -62,16 +59,7 @@ cancel(requestId);  // Cancels frame request
 ```
 
 ### The ideology
-request-frame aims to provide an optimal development consistency with the use of animation timing functions across the large number of browsers and devices. This lib is ideal for those who may want to avoid re-assigning native functions, or avoid interfering with other libs that do. requestFrame() is purposely not a constructor. The intention is for requestAnimationFrame to be used once or few times during execution since multiple task are expected to be more efficient via a single requestAnimationFrame loop compared to several instances.
-
-### Browsers tested & passing:
-
-Supports everything from IE5+
-
-[<img style="float: left; display: inline-block;" src="http://i61.tinypic.com/i1xuzd.jpg" width="380">](http://i61.tinypic.com/i1xuzd.jpg)
-
-[<img style="float: left; display: inline-block;"  src="http://i57.tinypic.com/j7fg2x.jpg" width="380">](http://i57.tinypic.com/j7fg2x.jpg)
-
+request-frame-modern aims to provide an optimal development consistency with the use of animation timing functions across the large number of browsers and devices. This lib is ideal for those who may want to avoid re-assigning native functions, or avoid interfering with other libs that do. requestFrameModern() is purposely not a constructor. The intention is for requestAnimationFrame to be used once or few times during execution since multiple task are expected to be more efficient via a single requestAnimationFrame loop compared to several instances.
     
 
 ### Contribute
@@ -91,6 +79,6 @@ _Browser based testing for RAF is imperative_
 
 --- 
 
-[MIT License](https://github.com/julienetie/request-frame/blob/master/LICENSE) 
+[MIT License](https://github.com/julienetie/request-frame-modern/blob/master/LICENSE) 
 
 &#169; 2016 Julien Etienne 

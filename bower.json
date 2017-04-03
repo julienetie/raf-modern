@@ -1,8 +1,8 @@
 {
-  "name": "request-frame",
-  "version": "1.5.3",
-  "description": "requestAnimationFrame & cancelAnimationFrame polyfill for optimal cross-browser development.",
-  "main": "dist/request-frame.js",
+  "name": "request-frame-modern",
+  "version": "2.0.0",
+  "description": "Optimal requestAnimationFrame & cancelAnimationFrame polyfill for modern development",
+  "main": "dist/request-frame-modern.js",
   "moduleType": [
     "amd",
     "globals"

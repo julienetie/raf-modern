@@ -110,8 +110,8 @@ if (!Array.prototype.indexOf) {
 }
 
 
-        var RA = requestFrame('request');
-        var CA = requestFrame('cancel');
+        var RA = requestFrameModern('request');
+        var CA = requestFrameModern('cancel');
 /**
  * Need to add iOS 6 + ff 4-10 bug checks.
  */

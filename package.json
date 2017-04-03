@@ -1,20 +1,19 @@
 {
-  "name": "request-frame",
-  "version": "1.5.3",
-  "description": "requestAnimationFrame & cancelAnimationFrame polyfill for optimal cross-browser development.",
-  "main": "dist/request-frame.js",
-  "jsnext:main": "dist/request-frame.es.js",
+  "name": "request-frame-modern",
+  "version": "2.0.0",
+  "description": "Optimal requestAnimationFrame & cancelAnimationFrame polyfill for modern development",
+  "main": "dist/request-frame-modern.js",
+  "jsnext:main": "dist/request-frame-modern.es.js",
   "scripts": {
     "bump": "gulp bump",
     "header": "gulp",
-    "build": "rollup -c rollup/rollup.config.umd.js && rollup -c rollup/rollup.config.es.js",
-    "watch": "rollup -c rollup/rollup.config.umd.js -c --watch",
+    "build": "./node_modules/.bin/rollup -c rollup/rollup.config.umd.js && rollup -c rollup/rollup.config.es.js",
     "test": "./node_modules/.bin/http-server ./ -p 9999",
-    "dummy": "wzrd  dummy.js | wtch | garnish"
+    "dummy": "./node_modules/.bin/wzrd  dummy.js | ./node_modules/.bin/wtch | ./node_modules/.bin/garnish"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/julienetie/request-frame"
+    "url": "https://github.com/julienetie/request-frame-modern"
   },
   "keywords": [
     "requestAnimationFrame",
@@ -35,14 +34,14 @@
   "author": "Julien Etienne",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/julienetie/request-frame/issues"
+    "url": "https://github.com/julienetie/request-frame-modern/issues"
   },
-  "homepage": "https://github.com/julienetie/request-frame",
+  "homepage": "https://github.com/julienetie/request-frame-modern",
   "devDependencies": {
-    "babel-cli": "*",
     "babel-preset-es2015": "*",
-    "babel-preset-es2015-rollup": "^1.2.0",
+    "babel-preset-es2015-rollup": "*",
     "chai": "*",
+    "garnish": "^5.2.0",
     "gulp": "^3.9.1",
     "gulp-bump": "*",
     "gulp-concat": "*",
@@ -53,7 +52,10 @@
     "mocha": "*",
     "requirejs": "*",
     "rollup": "*",
-    "rollup-plugin-babel": "*",
-    "rollup-watch": "*"
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-commonjs": "^8.0.2",
+    "rollup-watch": "*",
+    "wtch": "^4.0.1",
+    "wzrd": "^1.5.0"
   }
 }

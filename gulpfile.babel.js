@@ -1,4 +1,4 @@
-const version = '1.5.3';
+const version = '2.0.0';
 
 
 import {src, dest, task, watch} from 'gulp-es-next';
@@ -10,8 +10,8 @@ import pkg from './package.json';
 
 
 const banner = ['/**',
-        ' *  <%= pkg.name %> - requestAnimationFrame & cancelAnimationFrame polyfill for',
-        ' *   optimal cross-browser development.',
+        ' *  <%= pkg.name %> - Optimal requestAnimationFrame & cancelAnimationFrame polyfill',
+        ' *   for modern development',
         ' *    Version:  v<%= pkg.version %>',
         ' *     License:  <%= pkg.license %>',
         ' *      Copyright <%= pkg.author %> 2015 All Rights Reserved.',
@@ -33,7 +33,7 @@ const minBanner = ['/**',
 
 
 task('Add header to ES version', function() {
-    return src('./dist/request-frame.es.js')
+    return src('./dist/request-frame-modern.es.js')
         .pipe(header(minBanner, {
             pkg: pkg
         }))
@@ -42,7 +42,7 @@ task('Add header to ES version', function() {
 
 
 task('Add header to UMD version', function() {
-    return src('./dist/request-frame.js')
+    return src('./dist/request-frame-modern.js')
         .pipe(header(minBanner, {
             pkg: pkg
         }))

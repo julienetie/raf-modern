@@ -35,13 +35,13 @@
     <div></div>
     <!-- Display iOS version if any -->
     <div style='color: #BDF72A'></div>
-    <script src="../../dist/request-frame.js"></script>
+    <script src="../../dist/request-frame-modern.js"></script>
     <script>
     // Grab the div HTML collection.
     var div = document.getElementsByTagName('div');
 
     // Re-assign native functions
-    requestFrame('native');
+    requestFrameModern('native');
 
     // Expose the functions on screen
     (function exposeFunctions(timestamp) {
