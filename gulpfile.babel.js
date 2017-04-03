@@ -1,4 +1,4 @@
-const version = '2.0.0';
+const version = '2.0.1';
 
 
 import {src, dest, task, watch} from 'gulp-es-next';
