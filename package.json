@@ -1,6 +1,6 @@
 {
   "name": "request-frame-modern",
-  "version": "2.0.1",
+  "version": "2.0.3",
   "description": "Optimal requestAnimationFrame & cancelAnimationFrame polyfill for modern development",
   "main": "dist/request-frame-modern.js",
   "jsnext:main": "dist/request-frame-modern.es.js",
